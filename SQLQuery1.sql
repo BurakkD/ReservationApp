@@ -1,0 +1,1 @@
+﻿select CarriageCapacity from Carriages where CarriageId=1
