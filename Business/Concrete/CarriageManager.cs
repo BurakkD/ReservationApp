@@ -17,10 +17,7 @@ namespace Business.Concrete
     {
 
         ICarriageDal _carriageDal;
-        //EfCarriageDal efcarrigadal = new EfCarriageDal();
-      
-
-
+            
         public CarriageManager(ICarriageDal carriageDal)
         {
             _carriageDal = carriageDal;
@@ -39,15 +36,15 @@ namespace Business.Concrete
             _carriageDal.Delete(carriage);
         }
 
-        public void GetById(Carriage carriage)
+        public Carriage GetById(Carriage carriage)
         {
 
-           
-                
+            var result = _carriageDal.Get(c => c.CarriageId == carriage.CarriageId);
+            return result;
 
         }
 
-        public List<Carriage> GetAll(Carriage carriage)
+        public List<Carriage> GetAll()
         {
             
            return _carriageDal.GetAll();

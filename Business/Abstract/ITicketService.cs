@@ -8,7 +8,7 @@ namespace Business.Abstract
    public interface ITicketService
     {
         List<Ticket> GetAll();
-        void Add(Ticket ticket,Carriage carriage,Train train);
+        void Add(Ticket ticket);
         void Delete(Ticket ticket);
         void Update(Ticket ticket);
     }

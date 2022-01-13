@@ -22,24 +22,12 @@ namespace ConsoleApp1
             
             tickett.FirstName = "Burak";
             tickett.LastName = "Öner";
-            tickett.TicketId = 4;
-            tickett.TrainId = 1;
-            tickett.CarriageId = 3;
+            tickett.TicketId = 13;
+            tickett.TrainId = 2;
+            tickett.CarriageId = 2;
 
-         
-            
-
-            carriagee.CarriageId = 1;
-            carriagee.CarriageId = 2;
-            carriagee.CarriageId = 3;
-
-            trainn.TrainId = 1;
-            trainn.TrainId = 2;
-            trainn.TrainId = 3;
-
-           
-
-            ticketManager.Add(tickett,carriagee,trainn);
+                                    
+            ticketManager.Add(tickett);
 
 
 

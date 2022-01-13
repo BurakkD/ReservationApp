@@ -9,8 +9,8 @@ namespace Business.Abstract
 {
    public interface ICarriageService
     {
-        List<Carriage> GetAll(Carriage carriage);
-        void  GetById(Carriage carriage);
+        List<Carriage> GetAll();
+        Carriage GetById(Carriage carriage);
         void Add(Carriage carriage);
          void Update(Carriage carriage);
         void Delete(Carriage carriage);

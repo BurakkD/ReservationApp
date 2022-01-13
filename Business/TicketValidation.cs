@@ -14,9 +14,9 @@ namespace Business
 
             RuleFor(c => c.FirstName).NotEmpty();
             RuleFor(c => c.LastName).NotEmpty();
-            RuleFor(c => c.TicketId).GreaterThan(1);
-            RuleFor(c => c.CarriageId).GreaterThan(1);
-            RuleFor(c => c.TrainId).GreaterThan(1);
+            RuleFor(c => c.TicketId).GreaterThan(0);
+            RuleFor(c => c.CarriageId).GreaterThan(0);
+            RuleFor(c => c.TrainId).GreaterThan(0);
             
 
 

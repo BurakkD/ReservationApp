@@ -13,14 +13,17 @@ namespace Business.Concrete
         ITicketDal _ticketDal;
         ICarriageService _carriageService;
         ITrainService _trainService;
+        Train train = new Train();
+        Carriage carriage = new Carriage();
         public TicketManager(ITicketDal ticketDal, ICarriageService carriageService, ITrainService trainService)
         {
             _ticketDal = ticketDal;
             _carriageService = carriageService;
             _trainService = trainService;
         }
-        public void Add(Ticket ticket, Carriage carriage, Train train)
+        public void Add(Ticket ticket) 
         {
+
             ValidationTool.Validate(new TicketValidation(), ticket);
             if (ticket.TrainId == 1)
             {
@@ -29,7 +32,7 @@ namespace Business.Concrete
                     train.TrainId = 1;
                     carriage.CarriageId = 1;
                     _ticketDal.Add(ticket);
-                    _carriageService.Update(carriage);                  
+                    _carriageService.Update(carriage);
                     _trainService.Get(train);
 
 
@@ -81,6 +84,7 @@ namespace Business.Concrete
                     _carriageService.Update(carriage);
                     _ticketDal.Add(ticket);
                     _trainService.Get(train);
+                                                            
 
                 }
 
@@ -116,8 +120,10 @@ namespace Business.Concrete
 
                 }
 
+
             }
-            
+           
+
         }
 
         public void Delete(Ticket ticket)
